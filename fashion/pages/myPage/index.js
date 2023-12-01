@@ -68,19 +68,23 @@ export default function BoardNewPage() {
     useEffect(() => {
         const fetchData = async () => {
 
-            // try {
-            //
-            //     const response = await axios.get('http://127.0.0.1:8000/userinfo/', {
-            //         headers: {
-            //             Authorization: `Bearer ${accessToken}`,
-            //         },
-            //     });
-            //     setUsername(response.data);
-            //     setIsUserDataLoaded(true);
-            //
-            // } catch (error) {
-            //     console.error('서버 요청 오류:', error);
-            // }
+            try {
+
+                const response = await axios.get('http://127.0.0.1:8000/userinfo/', {
+                    headers: {
+                        Authorization: `Bearer ${accessToken}`,
+                    },
+                });
+                // setUsername(response.data);
+
+                console.log("유저인포");
+                console.log(response.data);
+
+                setIsUserDataLoaded(true);
+
+            } catch (error) {
+                console.error('서버 요청 오류:', error);
+            }
 
 
             try {
