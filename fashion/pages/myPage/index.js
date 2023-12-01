@@ -68,9 +68,24 @@ export default function BoardNewPage() {
     useEffect(() => {
         const fetchData = async () => {
 
+            // try {
+            //
+            //     const response = await axios.get('http://127.0.0.1:8000/userinfo/', {
+            //         headers: {
+            //             Authorization: `Bearer ${accessToken}`,
+            //         },
+            //     });
+            //     setUsername(response.data);
+            //     setIsUserDataLoaded(true);
+            //
+            // } catch (error) {
+            //     console.error('서버 요청 오류:', error);
+            // }
+
+
             try {
                 // 이미지 및 게시물 데이터를 병렬로 불러오기
-                const imageResponse= await axios.get(`http://127.0.0.1:8000/board/6/`, {
+                const imageResponse= await axios.get("http://127.0.0.1:8000/board/3/", {
                     headers: {
                         Authorization: `Bearer ${accessToken}`,
                     },
